@@ -1,0 +1,47 @@
+body {
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.todo-app {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.todo-logo {
+  width: 100px;
+}
+
+
+/* Form */
+.submit-btn {
+  position: absolute;
+  height: 30px;
+  padding: 5px 15px;
+  margin: 5px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+
+/* Labels */
+.todo-label {
+  text-align: left;
+  display: block;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* Input */
+.todo-input input {
+    width: 500px;
+    line-height: 15px;
+    font-size: 17px;
+    padding: 3px 10px;
+    outline: none;
+    cursor: cell;
+}
