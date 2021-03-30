@@ -30,10 +30,10 @@ const TodoList = () => {
     }
 
     const updateTodo = (todoId, newValue) => {
-        if(!todo.text || /^\s*$/.test(todo.text)) {
+        if(!newValue.text || /^\s*$/.test(newValue.text)) {
             return;
         }
-        setTodos(prev => prev.map(item => {item.id === todoId ? newValue :item}))
+        setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)))
     }
 
 
