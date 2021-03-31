@@ -1,6 +1,5 @@
 import Logo from './images/logo.png';
 import './styles/App.css';
-import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
 

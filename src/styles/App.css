@@ -1,47 +1,135 @@
 body {
-  background-color: #282c34;
-  font-size: calc(10px + 2vmin);
+  background: #4311a7;
   color: white;
-}
-
-.todo-app {
-  text-align: center;
-  padding-top: 50px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 .todo-logo {
   width: 100px;
+  margin: 10px auto;
 }
 
-
-/* Form */
-.submit-btn {
-  position: absolute;
-  height: 30px;
-  padding: 5px 15px;
-  margin: 5px;
-  top: 50%;
-  transform: translate(0, -50%);
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  min-height: 600px;
+  background: #272e4a;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
 }
 
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 24px;
+}
 
-/* Labels */
-.todo-label {
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-text {
+  width: 100%;
   text-align: left;
-  display: block;
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
+}
+
+/*           Todos inputs           */
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+.todo-input::placeholder {
+  color: #e2e2e2;
+}
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 118, 20, 1) 0%,
+    rgba(255, 84, 17, 1) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
 }
 
 
+/*           Todos Buttons          */
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
 
-/* Input */
-.todo-input input {
-    width: 500px;
-    line-height: 15px;
-    font-size: 17px;
-    padding: 3px 10px;
-    outline: none;
-    cursor: cell;
+
+/*           Todos mix colors           */
+.todo-row:nth-child(2n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+}
+
+
+/*           Todos Icons          */
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+.edit-icon {
+  color: #fff;
 }
